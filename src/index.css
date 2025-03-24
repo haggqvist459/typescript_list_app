@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+input, select, textarea {
+  font-size: 16px;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('/src/assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300 900; /* full range */
+    font-style: normal;
+    font-display: swap;
+  }
+
+@theme {
+  --breakpoint-xs: 25rem;
+  --font-rubik: Rubik, sans-serif;
+  --color-mint: #76D7C4;
+  --color-mint-light: #D1F2EB;
+  --color-primary: #34495E;   /* Default text and icon color (grey) */
+  --color-secondary: #5D6D7E; /* Secondary text and icon color (lighter grey) */
+  --color-tertiary: #A3E4D7;  /* tertiary color, mint between 'mint' and 'mint-light' */
+}
+
+@layer components {
+    .title {
+        @apply font-rubik text-xl lg:text-2xl font-bold text-primary
+    }
+    .menu-options {
+        @apply font-rubik text-lg lg:text-xl font-semibold text-primary
+    }
+    .list-item {
+        @apply font-rubik text-base lg:text-lg font-medium text-secondary
+    }
+}
+
+
+@layer utilities {
+  /* Remove number input arrows in Safari */
+  .no-spinner {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+  }
+  ::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+  }
+  html, body {
+    scrollbar-width: none; /* Hides scrollbar */
+  }
+  html, body {
+    -ms-overflow-style: none; /* Hides scrollbar */
+  }
+  .no-spinner::-webkit-inner-spin-button,
+  .no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
