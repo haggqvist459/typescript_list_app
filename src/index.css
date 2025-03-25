@@ -15,8 +15,10 @@ input, select, textarea {
 @theme {
   --breakpoint-xs: 25rem;
   --font-rubik: Rubik, sans-serif;
-  --color-mint: #76D7C4;
-  --color-mint-light: #D1F2EB;
+  --color-mint: #3EB489;
+  --color-mint-light: #77CAAC;
+  --color-mint-cream:#EBF7F3;
+  --color-mint-white: #F5FCF9;
   --color-primary: #34495E;   /* Default text and icon color (grey) */
   --color-secondary: #5D6D7E; /* Secondary text and icon color (lighter grey) */
   --color-tertiary: #A3E4D7;  /* tertiary color, mint between 'mint' and 'mint-light' */

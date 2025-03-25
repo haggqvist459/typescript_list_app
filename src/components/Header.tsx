@@ -1,8 +1,12 @@
-type Props = {}
+type Props = {
+  title?: string
+}
 
 const Header = (props: Props) => {
   return (
-    <div>Header</div>
+    <div className="flex flex-row justify-between p-5 bg-mint-light ">
+      <p className="title">{props.title}</p>
+    </div>
   )
 }
 
