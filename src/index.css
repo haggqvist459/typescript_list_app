@@ -19,14 +19,14 @@ input, select, textarea {
   --color-mint-light: #77CAAC;
   --color-mint-cream:#EBF7F3;
   --color-mint-white: #F5FCF9;
-  --color-primary: #34495E;   /* Default text and icon color (grey) */
+  --color-primary: #06120D;   /* Default text and icon color (grey) */
   --color-secondary: #5D6D7E; /* Secondary text and icon color (lighter grey) */
   --color-tertiary: #A3E4D7;  /* tertiary color, mint between 'mint' and 'mint-light' */
 }
 
 @layer components {
     .title {
-        @apply font-rubik text-xl lg:text-2xl font-bold text-primary
+        @apply font-rubik text-3xl lg:text-4xl font-bold text-primary
     }
     .menu-options {
         @apply font-rubik text-lg lg:text-xl font-semibold text-primary

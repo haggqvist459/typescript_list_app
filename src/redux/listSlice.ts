@@ -41,10 +41,11 @@ const listSlice = createSlice({
       state.items = [];
     },
     updateTitle: (state, action: PayloadAction<string>) => {
-      state.title = action.payload;
+      const trimmed = action.payload.trim().slice(0, 21)
+      state.title = trimmed;
     }
   }
 })
 
-export const { addItem, toggleCompletion, deleteItem, clearList, updateTitle } = listSlice.actions
-export default listSlice.reducer
+export const { addItem, toggleCompletion, deleteItem, clearList, updateTitle } = listSlice.actions;
+export default listSlice.reducer;

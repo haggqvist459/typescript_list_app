@@ -4,9 +4,9 @@ type Props = {
 
 const Header = (props: Props) => {
   return (
-    <div className="flex flex-row justify-between p-5 bg-mint-light ">
+    <nav className="flex flex-row justify-between p-5 bg-mint-light ">
       <p className="title">{props.title}</p>
-    </div>
+    </nav>
   )
 }
 
