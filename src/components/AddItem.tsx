@@ -8,10 +8,12 @@ const AddItem = () => {
   const [value, setValue] = useState('');
 
   const handleAddItemClick = (value: string) => {
-    dispatch(addItem(value));
+    const trimmed = value.trim();
+    if (!trimmed) return;
+    dispatch(addItem(trimmed));
     setValue('');
   }
-  
+
   return (
     <div className="flex flex-row mx-5 justify-between space-x-1 border-b-2 border-b-primary">
       <div>
