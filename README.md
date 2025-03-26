@@ -27,9 +27,9 @@
 
 #### Misc:
 - [ ] Persist list using localStorage
-- [ ] PWA for offline support
+- [x] PWA for offline support
 - [x] Custom font locally avaiable 
 - [x] Local SVG code for icons
 - [x] Theme variables for colours
-- [ ] Custom icon & splash screen
+- [x] Custom icon & splash screen
 - [ ] 

@@ -1,13 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { v4 as uuidv4 } from 'uuid'
-import { VISIBILITY_FILTERS, ListItemData, VisibilityFilterData } from '@/utils'
+import { VISIBILITY_FILTERS, ListState, VisibilityFilterData } from '@/utils'
 
 
-export type ListState = {
-  title: string,
-  visibilityFilter: VisibilityFilterData
-  items: ListItemData[]
-}
 
 const initialState: ListState = {
   title: 'Grocery List',
