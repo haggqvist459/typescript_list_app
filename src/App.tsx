@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="bg-mint-light min-h-screen flex flex-col">
-        <Header title="Testing title, long"/>
+        <Header />
     </div>
   )
 }

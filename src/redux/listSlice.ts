@@ -13,7 +13,7 @@ type ListState = {
 }
 
 const initialState: ListState = {
-  title: 'My List',
+  title: 'Grocery List',
   items: []
 }
 
@@ -41,7 +41,7 @@ const listSlice = createSlice({
       state.items = [];
     },
     updateTitle: (state, action: PayloadAction<string>) => {
-      const trimmed = action.payload.trim().slice(0, 21)
+      const trimmed = action.payload.trim().slice(0, 18)
       state.title = trimmed;
     }
   }

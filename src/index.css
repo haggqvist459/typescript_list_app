@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
+html, body {
+  overflow-x: hidden;
+}
+
 input, select, textarea {
-  font-size: 16px;
+  font-size: 30px;
 }
 
 @font-face {
@@ -17,32 +21,28 @@ input, select, textarea {
   --font-rubik: Rubik, sans-serif;
   --color-mint: #3EB489;
   --color-mint-light: #77CAAC;
+  --color-mint-dark: #0C241B;
   --color-mint-cream:#EBF7F3;
   --color-mint-white: #F5FCF9;
-  --color-primary: #06120D;   /* Default text and icon color (grey) */
+  --color-primary: #06120D;   /* Default text and icon color (very  dark green) */
   --color-secondary: #5D6D7E; /* Secondary text and icon color (lighter grey) */
   --color-tertiary: #A3E4D7;  /* tertiary color, mint between 'mint' and 'mint-light' */
 }
 
 @layer components {
     .title {
-        @apply font-rubik text-3xl lg:text-4xl font-bold text-primary
+        @apply font-rubik text-4xl lg:text-5xl font-bold text-primary
     }
     .menu-options {
         @apply font-rubik text-lg lg:text-xl font-semibold text-primary
     }
     .list-item {
-        @apply font-rubik text-base lg:text-lg font-medium text-secondary
+        @apply font-rubik text-base lg:text-lg font-medium text-primary
     }
 }
 
 
 @layer utilities {
-  /* Remove number input arrows in Safari */
-  .no-spinner {
-    -webkit-appearance: textfield;
-    appearance: textfield;
-  }
   ::-webkit-scrollbar {
     display: none; /* Hides scrollbar */
   }
@@ -51,10 +51,5 @@ input, select, textarea {
   }
   html, body {
     -ms-overflow-style: none; /* Hides scrollbar */
-  }
-  .no-spinner::-webkit-inner-spin-button,
-  .no-spinner::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
   }
 }
