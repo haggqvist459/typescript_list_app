@@ -4,7 +4,7 @@ import { loadData, saveData, VISIBILITY_FILTERS } from '@/utils';
 
 const preloadedState = {
     list: loadData() ?? {
-      title: 'Grocery List',
+      title: 'A Simple List',
       visibilityFilter: VISIBILITY_FILTERS.UNMARKED,
       items: [],
     },

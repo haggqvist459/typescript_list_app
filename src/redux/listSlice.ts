@@ -5,7 +5,7 @@ import { VISIBILITY_FILTERS, ListState, VisibilityFilterData } from '@/utils'
 
 
 const initialState: ListState = {
-  title: 'Grocery List',
+  title: 'A Simple List',
   visibilityFilter: VISIBILITY_FILTERS.UNMARKED,
   items: []
 }
