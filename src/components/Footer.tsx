@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <footer className='bg-mint-light flex justify-center items-center h-15 pb-5'>
+    <footer className='bg-mint-light flex justify-center items-center h-10'>
       <a href="https://github.com/haggqvist459/typescript_list_app" target='_blank' className='underline text-s text-mint-white'>Code on GitHub</a>
     </footer>
   )
