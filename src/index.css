@@ -6,6 +6,10 @@ html, body {
 
 input, select, textarea {
   font-size: 30px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -18,7 +22,9 @@ input, select, textarea {
 
 @theme {
   --breakpoint-xs: 25rem;
+
   --font-rubik: Rubik, sans-serif;
+  
   --color-mint: #3EB489;
   --color-mint-light: #77CAAC;
   --color-mint-dark: #0C241B;
@@ -31,13 +37,13 @@ input, select, textarea {
 
 @layer components {
     .title {
-        @apply font-rubik text-4xl lg:text-5xl font-bold text-primary
+        @apply font-rubik text-2xl xs:text-4xl md:text-5xl font-bold text-primary
     }
-    .menu-options {
-        @apply font-rubik text-lg lg:text-xl font-semibold text-primary
+    .menu-option {
+        @apply font-rubik text-xl xs:text-2xl md:text-3xl font-semibold text-primary
     }
-    .list-item {
-        @apply font-rubik text-base lg:text-lg font-medium text-primary
+    .item-text {
+        @apply font-rubik text-lg xs:text-xl md:text-2xl font-medium text-primary
     }
 }
 
