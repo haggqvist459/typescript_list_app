@@ -11,7 +11,7 @@ function App() {
     <div className="flex-grow overflow-y-auto">
       <List />
     </div>
-    <div className="sticky bottom-10 pb-safe z-10">
+    <div className="sticky bottom-10 z-10 pb-[env(safe-area-inset-bottom)]">
       <AddItem />
     </div>
     <div className="w-full bg-mint-light absolute top-full">
