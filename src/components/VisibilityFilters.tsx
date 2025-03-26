@@ -7,8 +7,6 @@ const VisibilityFilters = () => {
   const dispatch = useAppDispatch();
   const activeFilter = useAppSelector(selectVisibilityFilter);
 
-  console.log("activeFilter: ", activeFilter);
-
   return (
     <div className="flex justify-between mx-5 my-2">
       {Object.values(VISIBILITY_FILTERS).map((filter: VisibilityFilterData) => (
