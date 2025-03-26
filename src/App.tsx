@@ -23,9 +23,3 @@ function App() {
 }
 
 export default App
-
-// header
-// visibility filter
-// the list
-// the add item input 
-// footer 
