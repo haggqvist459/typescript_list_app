@@ -29,8 +29,8 @@ const Modal = ({
                 <h2 className="text-lg font-bold mb-4">{title}</h2>
                 <div className="mb-4">{description}</div>
                 <div className="flex justify-end space-x-2">
-                    <button onClick={onCancel} className="px-4 py-2 bg-neutral-500 text-mint-white rounded">Cancel</button>
-                    <button onClick={onConfirm} className="px-4 py-2 bg-primary text-mint-white rounded">Confirm</button>
+                    <button onClick={onCancel} className="px-4 py-2 bg-neutral-500 text-tertiary rounded">Cancel</button>
+                    <button onClick={onConfirm} className="px-4 py-2 bg-primary text-tertiary rounded">Confirm</button>
                 </div>
             </div>
         </div>

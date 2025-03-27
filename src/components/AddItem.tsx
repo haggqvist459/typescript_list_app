@@ -30,7 +30,7 @@ const AddItem = () => {
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="focus:outline-none "
+          className="focus:outline-none text-tertiary"
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
               handleAddItemClick(value);
