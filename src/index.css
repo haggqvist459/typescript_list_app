@@ -25,25 +25,38 @@ input, select, textarea {
 
   --font-rubik: Rubik, sans-serif;
   
+  /* Theme 1 */
   --color-mint: #3EB489;
   --color-mint-light: #77CAAC;
-  --color-mint-dark: #0C241B;
-  --color-mint-cream:#EBF7F3;
+  
+
+  /* Theme 2 */
+  --color-hot-pink: #FF69B4;
+  --color-bubblegum: #FFC1CC;
+
+  /* Theme 3 */ 
+  --color-azureish-white: #DCE5FD;
+  --color-ghost-white: #F5F7FE;
+
+  /* Other colours */
   --color-mint-white: #F5FCF9;
-  --color-primary: #06120D;   /* Default text and icon color (very  dark green) */
-  --color-secondary: #5D6D7E; /* Secondary text and icon color (lighter grey) */
+  --color-mint-dark: #0C241B;
+  --color-primary: var(--color-mint);
+  --color-secondary: var(--color-mint-light);
+  --color-dark-green: #06120D;   /* Default text and icon color (very  dark green) */
+  --color-light-grey: #5D6D7E; /* Secondary text and icon color (lighter grey) */
   --color-tertiary: #A3E4D7;  /* tertiary color, mint between 'mint' and 'mint-light' */
 }
 
 @layer components {
     .title {
-        @apply font-rubik text-2xl xs:text-4xl md:text-5xl font-bold text-primary
+        @apply font-rubik text-2xl xs:text-4xl md:text-5xl font-bold 
     }
     .menu-option {
-        @apply font-rubik text-xl xs:text-2xl md:text-3xl font-semibold text-primary
+        @apply font-rubik text-xl xs:text-2xl md:text-3xl font-semibold 
     }
     .item-text {
-        @apply font-rubik text-lg xs:text-xl md:text-2xl font-medium text-primary
+        @apply font-rubik text-lg xs:text-xl md:text-2xl font-medium 
     }
 }
 

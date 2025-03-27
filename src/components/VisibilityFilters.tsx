@@ -12,7 +12,7 @@ const VisibilityFilters = () => {
       {Object.values(VISIBILITY_FILTERS).map((filter: VisibilityFilterData) => (
         <button
           key={filter}
-          className={`menu-option ${filter === activeFilter ? 'underline inline-block text-primary' : ''}`}
+          className={`menu-option ${filter === activeFilter ? 'underline inline-block text-black' : ''}`}
           onClick={() => dispatch(setVisibilityFilter(filter))}>
           {filter}
         </button>

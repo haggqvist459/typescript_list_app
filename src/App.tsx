@@ -1,11 +1,22 @@
 
+import { useEffect } from "react";
 import { Header, Footer, AddItem, VisibilityFilters, List } from "@/components";
+import { LOCALSTORAGE_THEME, THEME_MAP } from "@/utils";
 
+const App = () => {
 
-function App() {
+  useEffect(() => {
+    
+    const savedTheme = localStorage.getItem(LOCALSTORAGE_THEME) as keyof typeof THEME_MAP;
+    if (!savedTheme || !THEME_MAP[savedTheme]) return;
+  
+    const { primary, secondary } = THEME_MAP[savedTheme];
+    document.documentElement.style.setProperty('--color-primary', primary);
+    document.documentElement.style.setProperty('--color-secondary', secondary);
+  }, []);
 
   return (
-    <div className="relative bg-mint-light h-[100dvh] flex flex-col">
+    <div className="relative bg-primary h-[100dvh] flex flex-col">
     <Header />
     <VisibilityFilters />
     <div className="flex-grow overflow-y-auto">

@@ -15,7 +15,7 @@ const AddItem = () => {
   }
 
   return (
-    <div className="flex flex-row mx-5 justify-between space-x-1 border-b-2 border-b-primary">
+    <div className="flex flex-row mx-5 justify-between space-x-1 border-b-2 border-b-black">
       <div>
         <input
           type="text"

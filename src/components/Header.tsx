@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useAppDispatch, useAppSelector, updateTitle, selectTitle, clearList } from '@/redux';
-import { TrashcanHeaderIcon } from '@/components';
-import Modal from '@/components/Modal';
+import { TrashcanHeaderIcon, Modal } from '@/components';
+import { setStatusBarColor } from '@/utils';
 
 const Header = () => {
   const title = useAppSelector(selectTitle);
@@ -16,20 +16,10 @@ const Header = () => {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
  
-  const setThemeColor = (color: string) => {
-    const metaTag = document.querySelector('meta[name="theme-color"]');
-    if (metaTag) {
-      metaTag.setAttribute('content', color);
-    }
-  }
 
   // Shade the status bar when modal is open
   useEffect(() => {
-    if (showModal) {
-      setThemeColor('#5FA28A'); // rgba(0,0,0,0.2)
-    } else {
-      setThemeColor('#77CAAC'); // or your default
-    }
+    setStatusBarColor(showModal)
   }, [showModal]);
 
 
@@ -78,7 +68,7 @@ const Header = () => {
 
 
   return (
-    <header className="flex justify-between items-baseline m-5 bg-mint-light ">
+    <header className="flex justify-between items-baseline m-5">
       <div
         onMouseDown={handleLongPressStart}
         onMouseUp={handleLongPressEnd}
