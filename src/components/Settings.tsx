@@ -20,11 +20,15 @@ const Settings = ({ isOpen, handleClose }: Props) => {
         <div
             className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                 } bg-black/20`}
+            onClick={handleClose}
         >
-            <div className="bg-mint-white p-6 rounded shadow-lg w-full max-w-md mx-2">
+            <div
+                className="bg-mint-white p-6 rounded shadow-lg w-full max-w-md mx-2"
+                onClick={(e) => e.stopPropagation()}
+            >
                 <div className="flex justify-between">
                     <h2 className="text-lg font-bold mb-4">Select Theme</h2>
-                    <div onClick={() => handleClose()}>
+                    <div onClick={handleClose}>
                         <Close />
                     </div>
                 </div>
