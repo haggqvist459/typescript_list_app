@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   font-size: 30px;
   width: 100%;
   min-width: 0;
@@ -13,62 +16,121 @@ input, select, textarea {
 }
 
 @font-face {
-    font-family: 'Rubik';
-    src: url('/src/assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
-    font-weight: 300 900; /* full range */
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: 'Rubik';
+  src: url('/src/assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 900;
+  /* full range */
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
   --breakpoint-xs: 25rem;
 
   --font-rubik: Rubik, sans-serif;
-  
+
   /* Theme 1 */
   --color-mint: #3EB489;
   --color-mint-light: #77CAAC;
-  
+
 
   /* Theme 2 */
   --color-hot-pink: #FF69B4;
   --color-bubblegum: #FFC1CC;
 
-  /* Theme 3 */ 
+  /* Theme 3 */
   --color-azureish-white: #DCE5FD;
   --color-ghost-white: #F5F7FE;
+
+  /* Theme 4 */
+  --color-lemon-yellow: #FFFF99;
+  --color-yellow-faded: #FFFFE2;
+
+  /* Theme 5 */
+  --color-kelp-green: #394827;
+  --color-dolphin-grey: #88917D;
+  --color-matte-cream: #FBFAD9;
 
   /* Other colours */
   --color-mint-white: #F5FCF9;
   --color-mint-dark: #0C241B;
   --color-primary: var(--color-mint);
   --color-secondary: var(--color-mint-light);
-  --color-dark-green: #06120D;   /* Default text and icon color (very  dark green) */
-  --color-light-grey: #5D6D7E; /* Secondary text and icon color (lighter grey) */
-  --color-tertiary: #A3E4D7;  /* tertiary color, mint between 'mint' and 'mint-light' */
+  --color-tertiary: var(--color-zinc-950);
+  --color-dark-green: #06120D;
+  /* Default text and icon color (very  dark green) */
+  --color-light-grey: #5D6D7E;
+  /* Secondary text and icon color (lighter grey) */
+
 }
 
 @layer components {
-    .title {
-        @apply font-rubik text-2xl xs:text-4xl md:text-5xl font-bold 
-    }
-    .menu-option {
-        @apply font-rubik text-xl xs:text-2xl md:text-3xl font-semibold 
-    }
-    .item-text {
-        @apply font-rubik text-lg xs:text-xl md:text-2xl font-medium 
-    }
+  .title {
+    @apply font-rubik text-2xl xs:text-4xl md:text-5xl font-bold text-tertiary
+  }
+
+  .menu-option {
+    @apply font-rubik text-xl xs:text-2xl md:text-3xl font-semibold text-tertiary decoration-tertiary
+  }
+
+  .item-text {
+    @apply font-rubik text-lg xs:text-xl md:text-2xl font-medium text-tertiary
+  }
 }
 
 
 @layer utilities {
   ::-webkit-scrollbar {
-    display: none; /* Hides scrollbar */
+    display: none;
+    /* Hides scrollbar */
   }
-  html, body {
-    scrollbar-width: none; /* Hides scrollbar */
+
+  html,
+  body {
+    scrollbar-width: none;
+    /* Hides scrollbar */
   }
-  html, body {
-    -ms-overflow-style: none; /* Hides scrollbar */
+
+  html,
+  body {
+    -ms-overflow-style: none;
+    /* Hides scrollbar */
+  }
+
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+
+  .bg-tertiary {
+    background-color: var(--color-secondary);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .text-tertiary {
+    color: var(--color-tertiary);
+  }
+
+  /* ✳️ Add transitions globally */
+  .bg-primary,
+  .bg-secondary,
+  .bg-tertiary,
+  .text-primary,
+  .text-secondary,
+  .text-tertiary {
+    @apply transition-colors duration-300;
   }
 }

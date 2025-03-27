@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { addItem, useAppDispatch } from '@/redux'
 import { AddItemIcon } from '@/components';
 
@@ -6,6 +6,7 @@ const AddItem = () => {
 
   const dispatch = useAppDispatch();
   const [value, setValue] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleAddItemClick = (value: string) => {
     const trimmed = value.trim();
@@ -14,10 +15,18 @@ const AddItem = () => {
     setValue('');
   }
 
+  const focusInput = () => {
+    inputRef.current?.focus();
+  };
+
+
   return (
-    <div className="flex flex-row mx-5 justify-between space-x-1 border-b-2 border-b-black">
+    <div
+      onClick={focusInput}
+      className="flex flex-row mx-5 justify-between space-x-1 border-b-2 border-b-tertiary">
       <div>
         <input
+          ref={inputRef}
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}

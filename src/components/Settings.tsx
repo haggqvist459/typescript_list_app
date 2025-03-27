@@ -9,9 +9,10 @@ type Props = {
 const Settings = ({ isOpen, handleClose }: Props) => {
 
     const handleThemeSelect = (theme: keyof typeof THEME_MAP) => {
-        const { primary, secondary } = THEME_MAP[theme];
+        const { primary, secondary, tertiary } = THEME_MAP[theme];
         document.documentElement.style.setProperty('--color-primary', primary);
         document.documentElement.style.setProperty('--color-secondary', secondary);
+        document.documentElement.style.setProperty('--color-tertiary', tertiary);
         localStorage.setItem(LOCALSTORAGE_THEME, theme);
         handleClose();
     };
@@ -32,13 +33,15 @@ const Settings = ({ isOpen, handleClose }: Props) => {
                         <Close />
                     </div>
                 </div>
-                <div className="mb-4 flex-wrap space-x-1">
+                <div className="mb-4 grid grid-cols-2 gap-2 w-full">
                     {Object.keys(THEME_MAP).map((themeName) => (
                         <button
                             key={themeName}
                             onClick={() => handleThemeSelect(themeName as keyof typeof THEME_MAP)}
-                            className="px-4 py-2 rounded font-medium text-white"
-                            style={{ backgroundColor: THEME_MAP[themeName as keyof typeof THEME_MAP].primary }}
+                            className=" py-2 w-full rounded font-medium"
+                            style={{ backgroundColor: THEME_MAP[themeName as keyof typeof THEME_MAP].primary, 
+                                color:  THEME_MAP[themeName as keyof typeof THEME_MAP].tertiary
+                            }}
                         >
                             {themeName}
                         </button>

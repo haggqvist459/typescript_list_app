@@ -35,7 +35,7 @@ const ListItem = ({ text, completed, onDelete, onToggle }: Props) => {
       >
       <div onClick={onToggle} className="flex flex-grow items-center space-x-1">
         <CheckboxIcon completed={completed} />
-        <span className={`item-text text-primary ${completed ? 'line-through' : ''}`}>{text}</span>
+        <span className={`item-text text-tertiary ${completed ? 'line-through' : ''}`}>{text}</span>
       </div>
       <div
         className={`py-1 transition-all duration-300 overflow-hidden ${showDelete ? 'w-8 opacity-100' : 'w-0 opacity-0'

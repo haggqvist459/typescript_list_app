@@ -3,7 +3,7 @@ type Props = {
 }
 const TrashcanIcon = ({ completed }: Props) => {
 
-  const classNames = 'size-6 xs:size-7 md:size-8 text-black'
+  const classNames = 'size-6 xs:size-7 md:size-8 text-tertiary'
 
   return completed
     ? (
