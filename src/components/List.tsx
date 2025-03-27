@@ -1,10 +1,11 @@
-import { useAppSelector, selectItems, useAppDispatch, toggleCompletion, deleteItem } from '@/redux';
+import { useAppSelector, selectItems, useAppDispatch, toggleCompletion, deleteItem, selectVisibilityFilter } from '@/redux';
 import { ListItemData } from '@/utils';
 import { ListItem } from '@/components'
 
 const List = () => {
 
     const items = useAppSelector(selectItems);
+    const activeFilter = useAppSelector(selectVisibilityFilter)
     const dispatch = useAppDispatch();
 
     return (
@@ -16,6 +17,7 @@ const List = () => {
                     completed={item.completed}
                     onToggle={() => dispatch(toggleCompletion(item.id))}
                     onDelete={() => dispatch(deleteItem(item.id))}
+                    activeFilter={activeFilter}
                 />
             ))}
         </div>
