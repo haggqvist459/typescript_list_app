@@ -8,8 +8,6 @@ type Props = {
 
 const Settings = ({ isOpen, handleClose }: Props) => {
 
-    if (!isOpen) return null
-
     const handleThemeSelect = (theme: keyof typeof THEME_MAP) => {
         const { primary, secondary } = THEME_MAP[theme];
         document.documentElement.style.setProperty('--color-primary', primary);
@@ -19,7 +17,10 @@ const Settings = ({ isOpen, handleClose }: Props) => {
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20">
+        <div
+            className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                } bg-black/20`}
+        >
             <div className="bg-mint-white p-6 rounded shadow-lg w-full max-w-md mx-2">
                 <div className="flex justify-between">
                     <h2 className="text-lg font-bold mb-4">Select Theme</h2>

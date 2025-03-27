@@ -15,10 +15,12 @@ const Modal = ({
     onConfirm,
 }: Props) => {
 
-    if (!isOpen) return null
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20">
+        <div
+            className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                } bg-black/20`}
+        >
             <div className="bg-mint-white p-6 rounded shadow-lg w-full max-w-md mx-2">
                 <h2 className="text-lg font-bold mb-4">{title}</h2>
                 <div className="mb-4">{description}</div>

@@ -5,10 +5,10 @@ import { setStatusBarColor } from '@/utils';
 const Footer = () => {
 
   const [showSettings, setShowSettings] = useState(false)
-  
-    useEffect(() => {
-      setStatusBarColor(showSettings);
-    }, [showSettings]);
+
+  useEffect(() => {
+    setStatusBarColor(showSettings);
+  }, [showSettings]);
 
 
   return (
@@ -17,9 +17,7 @@ const Footer = () => {
         <CogWheel />
       </div>
       <a href="https://github.com/haggqvist459/typescript_list_app" target='_blank' className='underline text-s text-mint-white'>Code on GitHub</a>
-      {showSettings &&
-        <Settings handleClose={() => setShowSettings(false)} isOpen={showSettings} />
-      }
+      <Settings handleClose={() => setShowSettings(false)} isOpen={showSettings} />
     </footer>
   )
 }

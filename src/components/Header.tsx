@@ -112,6 +112,4 @@ const Header = () => {
 
 export default Header;
 
-// long press on header to swap header with input field for customised  title 
-// dustbin in corner
-// modal popup, no direct delete
+
