@@ -12,6 +12,7 @@ export const loadData = (): ListState | undefined => {
         return undefined;
     }
 };
+
 // saveData  
 export const saveData = (data: ListState): void => {
     try {

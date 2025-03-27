@@ -1,6 +1,9 @@
 # Updated list app from prior redux tutorial
 ## Using TypeScript, Vite and Redux
 
+- Site link: [A Simple List](https://a-simple-list.netlify.app)
+- Save it to the home screen for stand-alone functionality 
+
 ### Features: 
 #### Header:
 - [x] Editable title by long press on it  
@@ -26,10 +29,9 @@
 - [x] Hide below add item
 
 #### Misc:
-- [ ] Persist list using localStorage
+- [x] Persist list using localStorage
 - [x] PWA for offline support
 - [x] Custom font locally avaiable 
 - [x] Local SVG code for icons
 - [x] Theme variables for colours
 - [x] Custom icon & splash screen
-- [ ] 
