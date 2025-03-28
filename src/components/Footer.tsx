@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="absolute left-5" onClick={() => setShowSettings(true)}>
         <CogWheel />
       </div>
-      <a href="https://github.com/haggqvist459/typescript_list_app" target='_blank' className='underline text-s text-tertiary'>Code on GitHub</a>
+      <a href="https://github.com/haggqvist459/typescript_list_app" target='_blank' className='underline text-sm text-tertiary'>Code on GitHub</a>
       <Settings handleClose={() => setShowSettings(false)} isOpen={showSettings} />
     </footer>
   )
