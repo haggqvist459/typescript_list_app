@@ -13,16 +13,16 @@ export const THEME_MAP = {
         secondary: 'var(--color-mint-light)',
         tertiary: 'var(--color-zinc-950)'
     },
-    'Kelp Green': {
-        primary: 'var(--color-kelp-green)',
-        secondary: 'var(--color-dolphin-grey)',
-        tertiary: 'var(--color-matte-cream)'
-    },
-    'Hot Pink': {
-        primary: 'var(--color-hot-pink)',
-        secondary: 'var(--color-bubblegum)',
-        tertiary: 'var(--color-zinc-950)'
-    },
+    // 'Kelp Green': {
+    //     primary: 'var(--color-kelp-green)',
+    //     secondary: 'var(--color-dolphin-grey)',
+    //     tertiary: 'var(--color-matte-cream)'
+    // },
+    // 'Hot Pink': {
+    //     primary: 'var(--color-hot-pink)',
+    //     secondary: 'var(--color-bubblegum)',
+    //     tertiary: 'var(--color-zinc-950)'
+    // },
     'Bubblegum': {
         primary: 'var(--color-bubblegum)',
         secondary: 'var(--color-hot-pink)',

@@ -20,7 +20,7 @@ const Settings = ({ isOpen, handleClose }: Props) => {
       onClick={handleClose}
     >
       <div
-        className="bg-mint-white p-6 rounded shadow-lg w-full max-w-md mx-2"
+        className="bg-neutral-50 p-6 rounded shadow-lg w-full max-w-md mx-2"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between">

@@ -7,14 +7,19 @@ const App = () => {
   useEffect(() => {
     
     const savedTheme = localStorage.getItem(LOCALSTORAGE_THEME) as keyof typeof THEME_MAP;
-    if (!savedTheme || !THEME_MAP[savedTheme]) return;
+    if (!savedTheme || !THEME_MAP[savedTheme]) {
+    const defaultTheme: keyof typeof THEME_MAP = "Mint"; // or whatever key you use
+    setTheme(defaultTheme);
+    localStorage.setItem(LOCALSTORAGE_THEME, defaultTheme);
+    return;
+  }
     
     setTheme(savedTheme)
 
   }, []);
 
   return (
-    <div className="relative bg-primary h-[100dvh] flex flex-col">
+    <div className="relative h-[100dvh] flex flex-col">
     <Header />
     <VisibilityFilters />
     <div className="flex-grow overflow-y-auto">

@@ -11,6 +11,7 @@ export function setTheme(themeName: keyof typeof THEME_MAP) {
 
 
   document.documentElement.style.backgroundColor = theme.primary;
+  document.body.style.transition = "background-color 0.3s ease";
   document.body.style.backgroundColor = theme.primary;
 
 
