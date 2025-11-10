@@ -1,7 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useAppDispatch, useAppSelector, updateTitle, selectTitle, clearList } from '@/redux';
 import { TrashcanHeaderIcon, Modal } from '@/components';
-import { setStatusBarColor } from '@/utils';
 
 const Header = () => {
   const title = useAppSelector(selectTitle);
@@ -16,12 +15,6 @@ const Header = () => {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
  
-
-  // Shade the status bar when modal is open
-  useEffect(() => {
-    setStatusBarColor(showModal)
-  }, [showModal]);
-
 
   // Functions for long press on title
   const handleLongPressStart = () => {

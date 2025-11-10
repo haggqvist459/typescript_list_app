@@ -15,14 +15,9 @@ const AddItem = () => {
     setValue('');
   }
 
-  const focusInput = () => {
-    inputRef.current?.focus();
-  };
-
 
   return (
     <div
-      onClick={focusInput}
       className="flex flex-row mx-5 justify-between space-x-1 border-b-2 border-b-tertiary">
       <div>
         <input

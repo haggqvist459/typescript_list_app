@@ -19,7 +19,7 @@ const Modal = ({
     return (
         <div
             className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-                } bg-black/20`}
+                }`}
             onClick={onCancel}
         >
             <div

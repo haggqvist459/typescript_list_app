@@ -1,15 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { CogWheel, Settings } from "@/components";
-import { setStatusBarColor } from '@/utils';
 
 const Footer = () => {
 
   const [showSettings, setShowSettings] = useState(false)
-
-  useEffect(() => {
-    setStatusBarColor(showSettings);
-  }, [showSettings]);
-
 
   return (
     <footer className='flex justify-center items-center h-10 relative'>
